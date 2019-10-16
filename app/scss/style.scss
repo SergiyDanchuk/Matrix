@@ -1,11 +1,9 @@
-html{
-    box-sizing: border-box;
-}
-*,
-*::before,
-*::after{
-    box-sizing: inherit;
-}
-body{
-    margin: 0;
-}
+@import 'vars';
+@import 'global';
+@import 'fonts';
+
+
+
+
+
+@import '_media';

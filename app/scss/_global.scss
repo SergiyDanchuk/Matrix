@@ -22,12 +22,17 @@ body{
 a{
     display: inline-block;
     text-decoration: none;
+    color: #000;
 }
 ul,
 li{
     margin: 0;
     padding: 0;
     list-style: none;
+}
+.default__title{
+    font-size: 50px;
+    color: #fff
 }
 .wrapper {
 	display: flex;

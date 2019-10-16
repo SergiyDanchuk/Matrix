@@ -94,6 +94,11 @@
     padding: 16px 38px;
     margin-top: 28px;
     color: #fff;
+    transition: all .3s;
+    &:hover{
+        border: 3px solid $blue;
+        color: $blue;
+    }
 }
 .slick-dots{
     display: flex;
@@ -115,6 +120,142 @@
     }
 }
 // end header
+//start about
+.about__title{
+    background-color: $blue;
+    width: 296px;
+    height: 92px;
+    transform: rotate(-5deg);
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 112px;
+    margin-bottom: 84px;
+    h3{
+        transform: rotate(5deg);
+    }
+}
+.about__box{
+    display: flex;
+    justify-content: space-between;
+}
+.about__images{
+    background-color: $blue;
+    min-width: 449px;
+    height: 449px;
+    position: relative;
+    margin-left: 12px;
+    margin-right: 124px;
+    img{
+        width: 441px;
+        height: 441px;
+        border: 5px solid #9acced;
+        position: absolute;
+        top: 68px;
+        left: 68px;    
+    }
+}
+.about__info{
+    margin-left: 9px;
+    .about__info-title{
+        font-size: 30px;
+        color: #393c41;
+        padding-bottom: 22px;
+        margin-bottom: 34px;
+        position: relative;
+        &::before{
+            content:"";
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background-color: $blue;
+            bottom: 0;
+            left: 0;
+        }
+    }
+    .about__info-text{
+        font-size: 16px;
+        line-height: 25px;
+        color: #bbb;
+    }
+}
+.about__info-box{
+    margin-top: 40px;
+    margin-bottom: 36px;
+    &::before{
+        content:"";
+        position: absolute;
+        width: 3px;
+        height: 102px;
+        background-color: $blue;
+    }
+    .about__info-goal{
+        padding-left: 29px;
+        padding-bottom: 11px;
+        padding-top: 5px;
+        font-size: 20px;
+        position: relative;
+        span{
+            color: #bbb;
+            font-weight: 500;
+        }
+    }
+}
+.about__info-btn{
+    color: #fff;
+    font-size: 18px;
+    background-color: $blue;
+    padding: 18px 24px 15px 50px;
+    position: relative;
+    &::before{
+        content: "\f07b"; 
+        font-family: 'icomoon';
+        position: absolute;
+        font-size: 18px;
+        bottom: 17px;
+        left: 15px;
+    }
+}
+.about__advantages{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 98px;
+    margin-bottom: 144px;
+}
+.about__advantages-item{
+    text-align: center;
+    max-width: 358px;
+    .about__advantages-images{
+        border: 2px solid $blue;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 28px;
+        &:hover{
+            background: linear-gradient(119deg, rgba(148,202,237,1) 0%, rgba(0,153,255,1) 100%);
+            transition: all .5s;
+        }
+        &:hover svg path{
+            fill: #fff;
+            transition: all .5s;
+        }
+    }
+    .about__advantages-title{
+        font-size: 20px;
+        color: #393c41;
+        margin-bottom: 16px;
+    }
+    .about__advantages-text{
+        font-size: 16px;
+        color: #bbb;    
+    }
+}
+
+//end about
 
 
 

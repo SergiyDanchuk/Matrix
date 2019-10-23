@@ -8,20 +8,19 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-
 }
 .header__menu{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #fff;
     padding-top: 40px;
     ul{
         display: flex;
-        li{
+        li a{
             padding-left: 50px;
             font-size: 15px;
             text-transform: uppercase;
+            color: #fff;
             transition: all .3s;
             &:hover{
                 color: $blue;
@@ -95,6 +94,7 @@
     margin-top: 28px;
     color: #fff;
     transition: all .3s;
+    cursor: pointer;
     &:hover{
         border: 3px solid $blue;
         color: $blue;
@@ -121,9 +121,12 @@
 }
 // end header
 //start about
-.about__title{
+.about__title,
+.works__title,
+.news__title{
     background-color: $blue;
-    width: 296px;
+    max-width: 328px;
+    width: 100%;
     height: 92px;
     transform: rotate(-5deg);
     margin: 0px auto;
@@ -160,7 +163,7 @@
     margin-left: 9px;
     .about__info-title{
         font-size: 30px;
-        color: #393c41;
+        color: $text;
         padding-bottom: 22px;
         margin-bottom: 34px;
         position: relative;
@@ -246,7 +249,7 @@
     }
     .about__advantages-title{
         font-size: 20px;
-        color: #393c41;
+        color: $text;
         margin-bottom: 16px;
     }
     .about__advantages-text{
@@ -254,9 +257,179 @@
         color: #bbb;    
     }
 }
-
 //end about
+//start works
+.works__wrapper{
+    max-width: 1920px;
+    margin: 0 auto;
+}
+.works__inner-btn{
+    text-align: center;
+    margin-bottom: 76px;
+    button{
+        border: none;
+        font-size: 14px;
+        font-weight: 700;
+        background-color: #fff;
+        cursor: pointer;
+        color: $text;
+        text-transform: uppercase;
+    }
+    .mixitup-control-active{
+        outline: none;
+        color: $blue;
+    }
+}
+.works__inner-box{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 150px;
+}
+.works__item{
+    width: 25%;
+    min-height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: auto auto;
+    position: relative;
+    &:hover{     
+        .works__item-info{
+            height: 400px;
+            padding-top: 300px;
+        }
+    }
+}
+// background-color: rgba(#606265, 0.5);
+.works__item-info{
+    height: 0px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding-left: 38px;
+    background-color: rgba(#606265, 0.5);
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    color: #fff;
+    transition: all .5s;
+    a{
+        color: #fff;
+        padding-bottom: 20px;
+        font-size: 20px;
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            background-color: $blue;
+            height: 5px;
+            width: 50px;
+            bottom: 0;
+        }
+    }
+    .item__description{
+        margin-top: 12px;
+        font-size: 14px;
+    }
+}
+//end works
+// start news
+.news__inner{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 130px;
+}
+.news__item{
+    max-width: 340px;
+    &:hover{
+        .item__images-info{
+            left: 0;
+            
+        }
+        .news__item-title{
+            color: $blue;
+        }
+    }   
+}
+.item__images{
+    position: relative;
+    overflow: hidden;
+    img{
+        width: 340px;
+        height: 320px;
+    }
+    .item__images-info{
+        position: absolute;
+        top: 40%;
+        left: -340px;
+        color: #fff;
+        text-align: center;
+        padding-top: 34px;
+        padding-bottom: 32px;
+        background-color: rgba($blue, .5);
+        width: 100%;
+        transition: all .8s;
+        font-size: 14px;
+    }
+}
+.news__item-title{
+    font-size: 24px;    
+    text-transform: uppercase;
+    color: $text;
+}
+.news__sub-title{
+    margin-top: 10px;
+    font-size: 14px;
+    color: #bbb;
+}
+.news-text{
+    color: #bbb;
+    font-size: 16px;
+    line-height: 20px;
+    font-style: italic;
+}
+// end news
+// start quote
+.quote{
+    background-color: #c8d1d8;
+}
+.quote__inner{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 700px;
+}
+.quote__box{
+    max-width: 415px;
+}
+.quote__element{
+    color: #94bad7;
+    font-size: 0px;
+}
+.quote__text{
+    font-size: 15px;
+    color: #aaaaaa;
+    position: relative;
+    &::before{
+        content:'“';   
+        color: #94bad7;
+        position: absolute;
+        font-size: 200px;
+        top: -90px;
+    }
+}
 
+.quote__title{
+    font-size: 30px;
+    color: $text;
+    text-align: right;
+    padding-top: 26px;
+}
+.quote__sub-title{
+    font-size: 14px;
+    color: #aaaaaa;
+    text-align: right;
+}
+// end quote
 
 
 @import '_media';

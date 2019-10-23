@@ -15,7 +15,7 @@
     <div class="wrapper">
         <div class="content">
             <!-- header -->
-            <header class="header">
+            <header class="header" id="home">
                 <div class="container">
                     <div class="header__menu">
                         <a href="#" class="header__logo">
@@ -23,11 +23,11 @@
                         </a>
                         <nav>
                             <ul>
-                                <li>Home</li>
-                                <li>About</li>
-                                <li>Portfolio</li>
-                                <li>Blog</li>
-                                <li>Contact</li>
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#works">Portfolio</a></li>
+                                <li><a href="#news">Blog</a></li>
+                                <li><a href="#">Contact</a></li>
                             </ul>
                         </nav>
                         <div class="header__other">
@@ -80,14 +80,14 @@
             </header>
             <!-- end header -->
             <!-- about us -->
-            <section class="about">
+            <section class="about" id="about">
                 <div class="container">
                     <div class="about__title">
                         <h3 class="default__title">About us</h3>
                     </div>
                     <div class="about__box">
                         <div class="about__images">
-                            <img src="images/about-img.jpeg" alt="creative foto">
+                            <img src="images/about-img.jpg" alt="creative foto">
                         </div>
                         <div class="about__info">
                             <div class="about__info-title">Hello! We’re a Creative Agency</div>
@@ -160,6 +160,156 @@
                 </div>
             </section>
             <!-- end about us -->
+            <!-- about works -->
+            <section class="works" id="works">
+                <div class="container-fluid">
+                    <div class="works__wrapper">
+                        <div class="works__title">
+                            <h3 class="default__title">Recent works</h3>
+                        </div>
+                        <div class="works__inner">
+                            <div class="works__inner-btn">
+                                <button type="button" data-filter="all">All</button>
+                                <button type="button" data-filter=".category-animation">Animation</button>
+                                <button type="button" data-filter=".category-app-design">App Design</button>
+                                <button type="button" data-filter=".category-photography">Photography</button>
+                                <button type="button" data-filter=".category-web-design">Web Design</button>
+                            </div>
+                            <div class="works__inner-box">
+                                <div class="works__item mix category-app-design"
+                                    style="background-image: url(images/works/app-design1.jpg);">
+                                    <div class="works__item-info">
+                                        <a href="#" class="item__title">Soundcloud</a>
+                                        <div class="item__description">web design / app design</div>
+                                    </div>
+                                </div>
+                                <div class="works__item mix category-app-design"
+                                    style="background-image: url(images/works/app-design2.jpg);">
+                                    <div class="works__item-info">
+                                        <a href="#" class="item__title">Soundcloud</a>
+                                        <div class="item__description">web design / app design</div>
+                                    </div>
+                                </div>
+                                <div class="works__item mix category-app-design"
+                                    style="background-image: url(images/works/app-design3.jpg);">
+                                    <div class="works__item-info">
+                                        <a href="#" class="item__title">Soundcloud</a>
+                                        <div class="item__description">web design / app design</div>
+                                    </div>
+                                </div>
+                                <div class="works__item mix category-animation"
+                                    style="background-image: url(images/works/photography1.jpg);">
+                                    <div class="works__item-info">
+                                        <a href="#" class="item__title">Soundcloud</a>
+                                        <div class="item__description">web design / app design</div>
+                                    </div>
+                                </div>
+                                <div class="works__item mix category-photography"
+                                    style="background-image: url(images/works/photography2.jpg);">
+                                    <div class="works__item-info">
+                                        <a href="#" class="item__title">Soundcloud</a>
+                                        <div class="item__description">web design / app design</div>
+                                    </div>
+                                </div>
+                                <div class="works__item mix category-photography"
+                                    style="background-image: url(images/works/web-design1.jpg);">
+                                    <div class="works__item-info">
+                                        <a href="#" class="item__title">Soundcloud</a>
+                                        <div class="item__description">web design / app design</div>
+                                    </div>
+                                </div>
+                                <div class="works__item mix category-web-design"
+                                    style="background-image: url(images/works/web-design2.jpg);">
+                                    <div class="works__item-info">
+                                        <a href="#" class="item__title">Soundcloud</a>
+                                        <div class="item__description">web design / app design</div>
+                                    </div>
+                                </div>
+                                <div class="works__item mix category-web-design"
+                                    style="background-image: url(images/works/web-design3.jpg);">
+                                    <div class="works__item-info">
+                                        <a href="#" class="item__title">Soundcloud</a>
+                                        <div class="item__description">web design / app design</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end works -->
+            <!-- start news -->
+            <section class="news" id="news">
+                <div class="container">
+                    <div class="news__title">
+                        <h3 class="default__title">Our news</h3>
+                    </div>
+                    <div class="news__inner">
+                        <div class="news__item">
+                            <div class="item__images">
+                                <img src="images/news/railway-station.jpg" alt="foto">
+                                <a href="#" class="item__images-info">READ MORE...</a>
+                            </div>
+                            <div class="news__item-title">railway station</div>
+                            <div class="news__sub-title">By Matrix / 05 Sep 2015</div>
+                            <p class="news-text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                when an unknown printer took a galley of type and scrambled it to make a type specimen
+                                book
+                            </p>
+                        </div>
+                        <div class="news__item">
+                            <div class="item__images">
+                                <img src="images/news/arlington-central-library.jpg" alt="foto">
+                                <a href="#" class="item__images-info">READ MORE...</a>
+                            </div>
+                            <div class="news__item-title">LOCAL LIBRARY</div>
+                            <div class="news__sub-title">By Matrix / 05 Sep 2015</div>
+                            <p class="news-text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                when an unknown printer took a galley of type and scrambled it to make a type specimen
+                                book
+                            </p>
+                        </div>
+                        <div class="news__item">
+                            <div class="item__images">
+                                <img src="images/news/journey.jpg" alt="foto">
+                                <a href="#" class="item__images-info">READ MORE...</a>
+                            </div>
+                            <div class="news__item-title">Our Journey</div>
+                            <div class="news__sub-title">By Matrix / 05 Sep 2015</div>
+                            <p class="news-text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                when an unknown printer took a galley of type and scrambled it to make a type specimen
+                                book
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end news -->
+            <!-- start quote -->
+            <section class="quote">
+                <div class="container">
+                    <div class="quote__inner">
+                        <div class="quote__box">
+                            <div class="quote__text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                when
+                                an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                It
+                                has survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was popularised in the 1960s with the release of
+                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                                publishing
+                                software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                            <div class="quote__title">Elizabeth Taylor</div>
+                            <div class="quote__sub-title">Graphic Designer & Manager</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end quote -->
         </div>
         <!-- footer -->
         <footer class="footer">

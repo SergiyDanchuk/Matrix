@@ -30,6 +30,22 @@ li{
     padding: 0;
     list-style: none;
 }
+.default__title-top{
+    background-color: $blue;
+    max-width: 328px;
+    width: 100%;
+    height: 92px;
+    transform: rotate(-5deg);
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 112px;
+    margin-bottom: 84px;
+    h3{
+        transform: rotate(5deg);
+    }
+}
 .default__title{
     font-size: 50px;
     margin-top: 75px;

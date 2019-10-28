@@ -36,5 +36,7 @@ $(function () {
         $('.header__menu>nav').slideToggle();
     });
 
+    new WOW().init();
+    
     var mixer = mixitup('.works__inner-box');
 });

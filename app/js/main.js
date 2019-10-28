@@ -6,13 +6,29 @@ $(function () {
         speed: 1000
     });
 
-    $('a[href^="#"]').click(function () {
-        var el = $(this).attr('href');
-        $('body').animate({
-            scrollTop: $(el).offset().top
-        }, 2000);
-        return false;
-    });
+    var linkNav = document.querySelectorAll('[href^="#"]'), 
+        V = .8;  
+    for (var i = 0; i < linkNav.length; i++) {
+        linkNav[i].addEventListener('click', function (e) { 
+            e.preventDefault(); 
+            var w = window.pageYOffset,  
+                hash = this.href.replace(/[^#]*(.*)/, '$1'); 
+            t = document.querySelector(hash).getBoundingClientRect().top,  
+                start = null;
+            requestAnimationFrame(step);  
+            function step(time) {
+                if (start === null) start = time;
+                var progress = time - start,
+                    r = (t < 0 ? Math.max(w - progress / V, w + t) : Math.min(w + progress / V, w + t));
+                window.scrollTo(0, r);
+                if (r != w + t) {
+                    requestAnimationFrame(step)
+                } else {
+                    location.hash = hash 
+                }
+            }
+        }, false);
+    }
 
     const btn = document.getElementById("menu-toggle");
     const lines = btn.querySelectorAll(".line");
@@ -37,6 +53,6 @@ $(function () {
     });
 
     new WOW().init();
-    
+
     var mixer = mixitup('.works__inner-box');
 });

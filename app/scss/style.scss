@@ -80,8 +80,10 @@
         height: 6px;
         background-color: $blue;
         bottom: 0px;
-        left: 44%;
-    }
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+    }   
 }
 .header__slider-text{
     margin: 0 auto;
@@ -119,6 +121,112 @@
         background-color: $blue;
     }
 }
+
+.btn-toggle {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    padding: 12px;
+    background-color: transparent;
+    border-color: transparent;
+    outline: none;
+    transform: translateZ(0);
+    transition: transform 0.1s ease-out;
+    
+    &:active { transform: translateY(4px); }
+    
+    &:focus .line:after { 
+      background-color: $toggle-line-focus-color;
+    }
+  }
+  .btn-toggle{
+    display: none;
+  }
+  .line {
+    display: block;
+    width: $toggle-size;
+    padding: $toggle-line-size/2;
+    
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: $toggle-line-size;
+      background-color: $toggle-line-color;
+      border-radius: 2px;
+      transform: translateZ(0) rotate(0);
+      transition: background-color 0.2s ease-out;
+    }
+      
+    .open & {
+      @for $i from 1 through 2 {
+        &:nth-child(#{$i}) {
+          animation: jump-#{$i} $toggle-anim-speed forwards ease;
+          &:after {
+            animation: line-#{$i} $toggle-anim-speed forwards ease-in-out;
+          }
+        }
+      }
+    }
+    
+    .close & {
+      @for $i from 1 through 2 {
+        &:nth-child(#{$i}) {
+          animation: jump-#{$i} $toggle-anim-speed reverse ease;
+          &:after {
+            animation: line-#{$i} $toggle-anim-speed reverse ease-in-out;
+          }
+        }
+      }
+    }
+    
+    .open &,
+    .close & {
+      &:nth-child(3) {
+        animation: jump-3 $toggle-anim-speed forwards ease-out;
+      }
+    }
+  }
+  
+  @keyframes line-1 {
+    10% { transform: translateZ(0) rotate(0) }
+    80% { transform: translateZ(0) rotate($toggle-line-angle - 10) }
+    90%, 100% { transform: translateZ(0) rotate($toggle-line-angle) }
+  }
+  
+  @keyframes line-2 {
+    10% { transform: translateZ(0) rotate(0) }
+    20% { transform: translateZ(0) rotate(10deg) }
+    90%, 100% { transform: translateZ(0) rotate(-$toggle-line-angle) }
+  }
+  
+  @keyframes jump-1 {
+    10% { transform: translateY(0) }
+    50% { transform: translateY(-$toggle-line-size * 12) }
+    90%, 100% { transform: translateY(-$toggle-line-size * 1) }
+  }
+  
+  @keyframes jump-2 {
+    10% { transform: translateY(0) }
+    50% { transform: translateY(-$toggle-line-size * 10) }
+    85%, 100% { transform: translateY(-$toggle-line-size * 3) }
+  }
+  
+  @keyframes jump-3 {
+    10% { transform: translateY(-$toggle-line-size*1) rotate(15deg) }
+    30% { transform: translateY(-$toggle-line-size*4) rotate(-10deg) }
+    50% { transform: translateY($toggle-line-size) rotate(5deg) }
+    80% { transform: translateY(0) }
+  }
+  
+  @keyframes glow {
+    50% {
+      box-shadow: rgba(lighten($toggle-line-color, 10%), 0.4) 0 0 2px 2px;
+    }
+  }
 // end header
 //start about
 .about__box{
@@ -132,6 +240,7 @@
     position: relative;
     margin-left: 12px;
     margin-right: 124px;
+    margin-bottom: 86px;
     img{
         width: 441px;
         height: 441px;
@@ -317,14 +426,14 @@
 .news__inner{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin-bottom: 130px;
 }
 .news__item{
     max-width: 340px;
     &:hover{
         .item__images-info{
-            left: 0;
-            
+            left: 0;    
         }
         .news__item-title{
             color: $blue;
@@ -452,7 +561,7 @@
     align-items: center;
     background-color: rgba($blue, 0.5);
     top: 0;
-    width: 100%;
+    width: 255px;
     height: 0px;
     overflow: hidden;
     color: #fff;
@@ -562,7 +671,9 @@
         width: 100px;
         height: 5px;
         bottom: 0;
-        left: 116px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
     }
     span{
         font-size: 60px;
@@ -683,6 +794,7 @@
     .news-text{
         font-size: 14px;
         margin-top: 10px;
+        padding-right: 5px;
     }
     .item__images-info::before{
         font-size: 20px;
@@ -794,5 +906,6 @@
     font-size: 12px;
     color: #fff;
 }
+
 //end footer
-@import '_media';
+@import 'media';

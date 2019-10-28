@@ -1,0 +1,168 @@
+@media (max-width: 1170px){
+    .team__inner{
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1140px){
+    .about__box{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .about__images{
+        margin-right: 12px;
+    }
+    .about__advantages-item{
+        max-width: 300px;
+    }
+    .works__item{
+        width: 50%;
+    }
+}
+@media (max-width: 1080px){
+    .price__inner{
+        flex-direction: column;
+    }
+    .price__item {
+        margin: 0px auto 20px auto;
+        max-width: 100%;
+    }
+    .footer__inner{
+        flex-wrap: wrap;
+    }
+    .footer__item.social{
+        display: block;
+    }
+}
+
+@media (max-width: 950px){
+    .about__advantages{
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    .about__advantages-item{
+        margin-top: 20px;
+        display: block;
+        min-width: 100%;
+    }
+    .footer__menu{
+        ul{
+           display: none; 
+        }
+    }
+    .copyrite{
+        margin: 0 auto;
+    }
+}
+@media (max-width: 900px){
+    .header__menu{
+        ul{
+            display: block;
+            text-align: center;
+            li{
+                border-bottom: 3px solid $blue;
+                padding-bottom: 10px;
+                padding-top: 10px;
+                a{
+                    padding-left: 0px;
+                }
+            }
+        }
+        nav{
+            display: none;
+            position: absolute;
+            min-width: 100%;
+            top:92px;
+            left: 0;
+    }
+}
+    .btn-toggle{
+        display: block;
+    }
+}
+@media (max-width: 800px){
+    .header__slider-title{
+        font-size: 40px;
+    }
+    .news__inner{
+        display: block;
+       
+    }
+    .news__item{
+       margin: 0 auto;
+    }  
+    .sponsor__images{
+        min-height: 140px; 
+    }
+}
+@media (max-width: 600px){
+    .header__slider-text{
+        font-size: 16px;  
+    }
+    .about__images img{
+        top: 4px;
+        left: 4px;
+    }
+    .works__item{
+        width: 100%;
+    }
+    .about__info .about__info-title{
+        font-size: 25px;
+    }
+    .about__info-box .about__info-goal{
+        font-size: 16px;
+        span{
+            font-size: 16px;
+        }
+    }
+    .team__item{
+        display: block;
+        text-align: center;
+    }
+    .team__info{
+        margin-left: 0;
+    }
+    .team__images{
+        display: flex;
+        justify-content: center;
+    }
+}
+@media (max-width: 560px){
+    .footer__inner{
+        justify-content: center;
+    }
+}
+@media (max-width: 490px){
+    .about__images{
+        min-width: 300px;
+        height: 300px;
+        img{
+            width: 292px;
+            height: 292px;
+        }
+    }
+}
+@media (max-width: 450px){
+    .header__slider-title{
+        font-size: 30px;
+    }
+    
+}
+@media (max-width: 400px){
+    .default__title-top{
+        max-width: 285px;
+    }
+    .default__title{
+        font-size: 40px;
+    }
+}
+@media (max-width: 340px){
+    .about__images{
+        min-width: 200px;
+        height: 200px;
+        img{
+            width: 192px;
+            height: 192px;
+        }
+    }
+}
